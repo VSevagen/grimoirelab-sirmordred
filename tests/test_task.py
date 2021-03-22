@@ -102,6 +102,8 @@ class TestTask(unittest.TestCase):
             perceval_params = task._compose_perceval_params(backend, repo)
             expected_params = expected_repo_params.get(backend)['params']
 
+            print(expected_params)
+
             self.assertEqual(expected_params.sort(), perceval_params.sort())
 
     def test_get_collection_url(self):
